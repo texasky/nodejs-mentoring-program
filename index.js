@@ -1,5 +1,7 @@
+const repl = require('node:repl');
+
 function getRandomNumber() {
     console.log(Math.random());
 }
 
-getRandomNumber();
+repl.start('>').context.getRandomNumber = getRandomNumber;
