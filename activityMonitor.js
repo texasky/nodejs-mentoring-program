@@ -19,7 +19,7 @@ const spawnProcess = (command, args) => {
     process.stdout.on('data', (data) => {
         console.clear();
 
-        if(dataChunks >= 60) {
+        if (dataChunks >= 60) {
             fs.appendFile('activityMonitor.log', fullData, (err) => {
                 if (err) throw err;
             });
@@ -35,7 +35,4 @@ const spawnProcess = (command, args) => {
         console.log(`${data}`);
     });
 }
-setInterval(() => {
-    spawnProcess(properShellCommand, [])
-    }, 100
-)
+setInterval(() => spawnProcess(properShellCommand, []), 100)
