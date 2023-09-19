@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "task1": "node cusomEventEmitter/task1.js",
+    "task2": "node cusomEventEmitter/task2.js",
+    "task3": "node cusomEventEmitter/task3.js"
   },
   "author": "Aliaksei Maslau",
   "license": "ISC",
   "dependencies": {
+    "csvtojson": "^2.0.10",
     "nodemon": "^3.0.1"
   }
 }
