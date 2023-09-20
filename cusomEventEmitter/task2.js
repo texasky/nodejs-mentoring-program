@@ -5,8 +5,6 @@ class WithTime extends EventEmitter {
         this.emit('begin');
         console.time('execute time');
 
-        this.on('data', (data)=> console.log(data));
-
         asyncFunc(...args, (err, data) => {
             if (err) {
                 return this.emit('error', err);
